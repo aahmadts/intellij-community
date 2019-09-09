@@ -1,6 +1,7 @@
 // Copyright 2000-2019 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file.
 package com.intellij.openapi.externalSystem.model.settings;
 
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.Key;
 import com.intellij.openapi.util.UserDataHolder;
 import com.intellij.openapi.util.UserDataHolderBase;
@@ -19,6 +20,7 @@ import java.util.*;
 public class ExternalSystemExecutionSettings implements Serializable, UserDataHolder {
 
   public static final String REMOTE_PROCESS_IDLE_TTL_IN_MS_KEY = "external.system.remote.process.idle.ttl.ms";
+  public static final Key<Project> IDE_PROJECT_KEY = Key.create("IDE_PROJECT_KEY");
   private static final int DEFAULT_REMOTE_PROCESS_TTL_MS = -1;
 
   private static final long serialVersionUID = 1L;

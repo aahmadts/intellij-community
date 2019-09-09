@@ -151,6 +151,7 @@ public class ExternalSystemExecuteTaskTask extends AbstractExternalSystemTask {
       throw e;
     }
 
+    settings.putUserData(ExternalSystemExecutionSettings.IDE_PROJECT_KEY, getIdeProject());
     taskManager.executeTasks(id, myTasksToExecute, projectPath, settings, myJvmParametersSetup);
   }
 
